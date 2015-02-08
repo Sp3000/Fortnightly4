@@ -1,0 +1,18 @@
+colour red
+place 0 0 blue
+colour red
+colour blue
+place 0 1 blue
+colour blue
+connect 0 0 0 1
+colour blue
+place 100 100 green
+place -100 -100 blue
+colour green
+colour blue
+remove 0 0
+colour blue
+colour red
+place 0 0 yellow
+colour yellow
+halt

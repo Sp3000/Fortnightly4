@@ -31,4 +31,12 @@ disconnect 1 0 2 0
 connected 2 0 2 1
 place 1 1 orange
 connected 0 0 1 1
+place 100 100 blue
+place 100 101 yellow
+connect 100 100 100 101
+connected 100 100 100 101
+remove 100 100
+connected 100 100 100 101
+place 100 100 blue
+connected 100 100 100 101
 halt
