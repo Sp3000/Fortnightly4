@@ -3,6 +3,7 @@ import subprocess
 import unittest
 
 COMMAND = "py -3 main.py"
+TEST_FOLDER = "correctness_tests"
 
 class TestBlockStructure(unittest.TestCase):
     def setUp(self):
@@ -10,8 +11,9 @@ class TestBlockStructure(unittest.TestCase):
                                         stdin=subprocess.PIPE,
                                         stdout=subprocess.PIPE,
                                         stderr=subprocess.PIPE)
+        
 
-    def runTest(self, in_filepath, expected_filepath):
+    def run_test(self, in_filepath, expected_filepath):
         with open(expected_filepath) as expectedfile:
             # Possible answers are separated by |
             expected = [line.strip().split("|") for line in
@@ -32,10 +34,26 @@ class TestBlockStructure(unittest.TestCase):
             if stdin_output[i] not in expected[i]:
                 raise AssertionError("Output '{}' not in {}".format(stdin_output[i], expected[i]))
 
-        
+
+    def run_testname(self, testname):
+        self.run_test("{}/{}.input".format(TEST_FOLDER, testname),
+                      "{}/{}.expected".format(TEST_FOLDER, testname))
+
+
+    def test_basic(self):
+        self.run_testname("basic")
+
+
+    def test_connect(self):
+        self.run_testname("connect")
+
+
     def test_place(self):
-        self.runTest("correctness_tests/place_count.input",
-                     "correctness_tests/place_count.expected")
+        self.run_testname("place")
+
+
+    def test_remove(self):
+        self.run_testname("remove")
         
 
     def tearDown(self):

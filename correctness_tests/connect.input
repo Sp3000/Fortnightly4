@@ -1,0 +1,12 @@
+place 0 0 red
+count
+place 0 1 red
+count
+connect 0 0 0 1
+count
+place 0 2 blue
+count
+connect 0 0 0 2
+count
+connect 0 1 0 2
+count

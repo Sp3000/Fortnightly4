@@ -1,0 +1,15 @@
+place 0 0 red
+count
+place 0 1 red
+count
+place 500 500 red
+count
+remove 0 0
+remove 0 0
+count
+remove 0 1
+count
+remove 500 500
+count
+remove 0 0
+halt
