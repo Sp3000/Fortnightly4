@@ -1,0 +1,27 @@
+nearest 0 0
+place 0 0 red
+nearest 0 0
+nearest 1 1
+nearest -1000 1000
+place 1 0 green
+nearest 0 0
+nearest 1 0
+nearest 0 1
+nearest 1 1
+place 0 4 purple
+nearest 0 1
+nearest 0 3
+nearest 0 2
+nearest 0 2
+nearest 2 2
+nearest -100 -100
+nearest -50000 3
+remove 0 0
+nearest 0 2
+nearest 0 0
+nearest 1 2
+remove 1 0
+nearest 10000 10000
+remove 0 4
+nearest -1 -1
+halt

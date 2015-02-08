@@ -150,7 +150,7 @@ class BlockStructure():
 
     def nearest(self, x, y):
         if not self.blocks:
-            raise InvalidCommandException
+            return []
         
         min_ = min(abs(block.block.real - x) + abs(block.block.imag - y) for block in self.blocks.keys())
 

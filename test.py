@@ -17,8 +17,8 @@ class TestBlockStructure(unittest.TestCase):
     def run_test(self, in_filepath, expected_filepath):
         with open(expected_filepath) as expectedfile:
             # Possible answers are separated by |
-            expected = [line.strip().split("|") for line in
-                        expectedfile.read().strip().split("\n")]
+            expected = [[x.strip() for x in line.strip().split("|")]
+                        for line in expectedfile.read().strip().split("\n")]
 
         with open(in_filepath) as infile:
             input_ = infile.read().encode()
