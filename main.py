@@ -25,13 +25,21 @@ def parse_command(line):
         elif command == "nearest":
             all_nearest = structure.nearest(*map(int, args))
 
-            print(*all_nearest[0])
+            if all_nearest:
+                print(*all_nearest[0])
+
+            else:
+                print("none")
 
         elif command == "colour":
             all_with_colour = structure.colour(*args)
 
-            print(" ".join("({}, {})".format(int(block.real), int(block.imag))
-                           for block in all_with_colour)) 
+            if all_with_colour:
+                print(" ".join("({}, {})".format(int(block.real), int(block.imag))
+                               for block in all_with_colour))
+
+            else:
+                print("none")
 
     except Exception:
         print("Error: {}".format(line))

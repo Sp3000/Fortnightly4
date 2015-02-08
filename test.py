@@ -1,5 +1,4 @@
 import random
-import re
 import subprocess
 import unittest
 
@@ -15,14 +14,14 @@ class TestBlockStructure(unittest.TestCase):
     def runTest(self, in_filepath, expected_filepath):
         with open(expected_filepath) as expectedfile:
             # Possible answers are separated by |
-            expected = [re.sub("\s+", "", line).split("|") for line in
+            expected = [line.strip().split("|") for line in
                         expectedfile.read().strip().split("\n")]
 
 
         with open(in_filepath) as infile:
             input_ = infile.read().encode()
 
-        stdin_output = [re.sub("\s+", "", line) for line in
+        stdin_output = [line.strip() for line in
                         self.process.communicate(input_)[0].decode().strip().split("\n")]
 
         if len(expected) != len(stdin_output):
