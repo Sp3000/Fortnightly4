@@ -1,0 +1,27 @@
+rotate 0 0 1
+place 0 0 red
+rotate 0 0 1
+place 0 0 green
+place 1 0 blue
+connect 0 0 1 0
+rotate 0 0 1
+place 1 0 purple
+place 0 1 yellow
+rotate 0 1 1
+place 0 0 purple
+place 1 1 yellow
+rotate 0 1 2
+place -1 1 yellow
+connect 0 0 0 1
+rotate 0 0 2
+place 0 -1 orange
+place 1 -1 orange
+count
+connect 1 0 1 -1
+count
+rotate 1 0 3
+place 0 0 red
+place 0 1 red
+place 1 0 red
+place 1 1 red
+halt

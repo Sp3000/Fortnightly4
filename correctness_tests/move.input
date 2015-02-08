@@ -1,0 +1,19 @@
+move 0 0 1 1
+place 0 0 red
+move 0 0 1 1
+place 1 1 green
+place 1 2 blue
+connect 1 1 1 2
+place 5 5 yellow
+move 1 2 4 4
+move 1 2 4 3
+place 5 6 blue
+move 5 5 -2 -2
+place 5 6 purple
+move 3 3 -2 -2
+place 0 1 red
+connect 0 1 1 1
+move 1 2 3 2
+move 1 2 3 1
+move 9 9 5 5
+halt

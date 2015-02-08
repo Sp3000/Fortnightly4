@@ -7,3 +7,4 @@ place 0 0 blue
 count
 place 1 1 red
 count
+halt

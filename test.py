@@ -23,8 +23,11 @@ class TestBlockStructure(unittest.TestCase):
         with open(in_filepath) as infile:
             input_ = infile.read().encode()
 
+        output = self.process.communicate(input_)
+        assert not output[1] # stderr
+        
         stdin_output = [line.strip() for line in
-                        self.process.communicate(input_)[0].decode().strip().split("\n")]
+                        output[0].decode().strip().split("\n")]
 
         if len(expected) != len(stdin_output):
             raise AssertionError("Expected {} lines, outputted {}".format(

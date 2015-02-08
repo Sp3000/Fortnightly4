@@ -1,0 +1,27 @@
+place 0 0 red
+place 0 1 red
+count
+connect 0 0 0 1
+count
+disconnect 0 1 0 0
+count
+connect 0 1 0 0
+count
+disconnect 0 1 0 0
+count
+connect 0 0 0 1
+place 1 0 green
+place 1 1 red
+count
+connect 1 1 1 0
+count
+connect 1 0 0 0
+connect 1 1 0 1
+count
+disconnect 0 0 1 1
+disconnect 1 1 1 2
+disconnect 1 0 0 0
+count
+disconnect 0 0 0 1
+count
+halt

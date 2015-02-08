@@ -1,0 +1,34 @@
+place 0 0 red
+connected 0 0 0 1
+place 0 1 green
+connected 0 0 0 1
+connect 0 0 0 1
+connected 0 1 0 0
+connected 0 0 0 1
+place 1 0 blue
+connected 0 1 1 0
+connect 1 0 0 0
+connected 0 1 1 0
+place 0 2 yellow
+connect 0 1 0 2
+place 1 2 yellow
+connect 0 2 1 2
+place 2 2 blue
+connect 1 2 2 2
+connected 2 2 1 0
+place 2 1 green
+place 2 0 red
+connect 2 1 2 0
+connected 2 0 0 0
+connected 2 0 2 1
+connect 2 1 2 2
+connected 2 0 1 0
+connect 1 0 2 0
+connected 1 0 2 0
+disconnect 2 0 2 1
+connected 2 0 2 1
+disconnect 1 0 2 0
+connected 2 0 2 1
+place 1 1 orange
+connected 0 0 1 1
+halt

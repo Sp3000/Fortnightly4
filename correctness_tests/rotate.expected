@@ -1,0 +1,13 @@
+Error: rotate 0 0 1
+Error: place 0 0 green
+Error: place 0 1 yellow
+Error: place 1 1 yellow
+Error: place -1 1 yellow
+Error: place 0 -1 orange
+Error: place 1 -1 orange
+2
+1
+Error: place 0 0 red
+Error: place 0 1 red
+Error: place 1 0 red
+Error: place 1 1 red

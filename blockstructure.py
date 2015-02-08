@@ -113,7 +113,7 @@ class BlockStructure():
             block.block += delta
             self.obj_dict[block.block] = block
 
-    def rotate(self, x, y, cw_times):
+    def rotate(self, x, y, ccw_times):
         block_c = x+y*1j
 
         if block_c not in self.obj_dict:
@@ -122,7 +122,7 @@ class BlockStructure():
         block = self.obj_dict[block_c]
         structure = self._flood_fill(block)
 
-        transform = lambda pos: (pos - block_c)*((-1j)**cw_times) + block_c
+        transform = lambda pos: (pos - block_c)*(1j**ccw_times) + block_c
         curr_positions = {block.block for block in structure}
 
         if any(transform(block.block) not in curr_positions and
